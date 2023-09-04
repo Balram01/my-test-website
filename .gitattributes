@@ -1,2 +1,32 @@
 # Auto detect text files and perform LF normalization
-* text=auto
+* text=auto 
+ 
+var readlinSync = require ("readline-sync");
+
+
+function play(question, answer) {
+  var userAnswer = readlinSync.question(question);
+
+  if (userAnswer === answer) {
+    console.log("You were right!");
+   var score = score + 1;
+  } else {
+    console.log("You were wrong!");
+    var score = score - 1;
+  }
+  
+} 
+
+play("How many hearts does an octopus have? ","3");
+
+play("What phone company produced the 3310? ","Nokia");
+
+play("On what continent would you find the world’s largest desert? ", "Antarctica");
+
+play("what is the capital of nepal? ", "Kathmandu");
+
+play("What country has won the most World Cups in football? ", "Brazil");
+
+play("What is the largest Spanish-speaking city in the world? ", "Mexico");
+
+console.log("you  score is", score);
